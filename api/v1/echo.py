@@ -18,7 +18,7 @@ class API(api_tools.APIBase):
         if tts:
             try:
                 sleep(min({float(tts), 10}))
-            except TypeError:
+            except ValueError:
                 ...
         return {'args': dict(request.args)}, sc
 
@@ -28,7 +28,7 @@ class API(api_tools.APIBase):
         if tts:
             try:
                 sleep(min({float(tts), 10}))
-            except TypeError:
+            except ValueError:
                 ...
         return {'args': dict(request.args), 'json': dict(request.json)}, sc
 
@@ -38,7 +38,7 @@ class API(api_tools.APIBase):
         if tts:
             try:
                 sleep(min({float(tts), 10}))
-            except TypeError:
+            except ValueError:
                 ...
         return {'args': dict(request.args), 'json': dict(request.json)}, sc
 
@@ -48,6 +48,6 @@ class API(api_tools.APIBase):
         if tts:
             try:
                 sleep(min({float(tts), 10}))
-            except TypeError:
+            except ValueError:
                 ...
         return {'args': dict(request.args), 'json': dict(request.json)}, sc
