@@ -1,6 +1,6 @@
 {
   "name": "Mock api",
   "version": "0.1",
-  "depends_on": ["prompts"],
+  "depends_on": [],
   "init_after": []
 }
