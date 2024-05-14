@@ -20,7 +20,7 @@ class API(api_tools.APIBase):
                 sleep(min({float(tts), 10}))
             except ValueError:
                 ...
-        return {'args': dict(request.args)}, sc
+        return {'args': dict(request.args), 'project_id': project_id}, sc
 
     def post(self, project_id: int, **kwargs):
         tts = request.json.get('sleep')
@@ -30,7 +30,7 @@ class API(api_tools.APIBase):
                 sleep(min({float(tts), 10}))
             except ValueError:
                 ...
-        return {'args': dict(request.args), 'json': dict(request.json)}, sc
+        return {'args': dict(request.args), 'json': dict(request.json), 'project_id': project_id}, sc
 
     def put(self, project_id: int, **kwargs):
         tts = request.json.get('sleep')
@@ -40,7 +40,7 @@ class API(api_tools.APIBase):
                 sleep(min({float(tts), 10}))
             except ValueError:
                 ...
-        return {'args': dict(request.args), 'json': dict(request.json)}, sc
+        return {'args': dict(request.args), 'json': dict(request.json), 'project_id': project_id}, sc
 
     def delete(self, project_id: int, **kwargs):
         tts = request.json.get('sleep')
@@ -50,4 +50,4 @@ class API(api_tools.APIBase):
                 sleep(min({float(tts), 10}))
             except ValueError:
                 ...
-        return {'args': dict(request.args), 'json': dict(request.json)}, sc
+        return {'args': dict(request.args), 'json': dict(request.json), 'project_id': project_id}, sc
